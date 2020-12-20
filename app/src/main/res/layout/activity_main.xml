@@ -7,13 +7,129 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewTeamA"
+        app:layout_constraintBottom_toBottomOf="@id/btnMinusScoreTeamA"/>
+
     <TextView
+        android:id="@+id/textViewTeamA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:text="Team A"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvScoreTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/textViewTeamA"
+        app:layout_constraintStart_toStartOf="@+id/textViewTeamA"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTeamA" />
+
+    <Button
+        android:id="@+id/btnPlusScoreTeamA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvScoreTeamA"
+        app:layout_constraintEnd_toStartOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/btnMinusScoreTeamA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnPlusScoreTeamA"
+        app:layout_constraintStart_toStartOf="@id/btnPlusScoreTeamA"
+        app:layout_constraintEnd_toEndOf="@id/btnPlusScoreTeamA"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+       app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvScoreTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/textViewTeamB"
+        app:layout_constraintStart_toStartOf="@+id/textViewTeamB"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTeamB" />
+
+    <Button
+        android:id="@+id/btnPlusScoreTeamB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="+1"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@id/tvScoreTeamB" />
+
+    <Button
+        android:id="@+id/btnMinusScoreTeamB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnPlusScoreTeamB"
+        app:layout_constraintStart_toStartOf="@id/btnPlusScoreTeamB"
+        app:layout_constraintEnd_toEndOf="@id/btnPlusScoreTeamB"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="RESET"
+        android:onClick="reset"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:layout_marginTop="90dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
